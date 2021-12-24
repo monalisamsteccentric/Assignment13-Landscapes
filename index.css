@@ -1,0 +1,52 @@
+#panel-1{
+    background-image: url('photo-1558979158-65a1eaa08691.avif');
+}
+#panel-2{
+    background-image: url('photo-1572276596237-5db2c3e16c5d.avif') ;
+}
+#panel-3{
+    background-image: url('photo-1507525428034-b723cf961d3e.avif') ;
+}
+#panel-4{
+    background-image: url('photo-1551009175-8a68da93d5f9.avif') ;
+}
+#panel-5{
+    background-image: url('photo-1549880338-65ddcdfd017b.avif') ;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.panel{
+    flex:0.5;
+    margin: 2%;
+    overflow: hidden;
+    border-radius: 50px;
+    height: 90vh;
+    position: relative;
+    transition: all 700ms ease-in;
+}
+.active{
+    flex: 5;
+}
+
+.panel h3{
+    position:absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    font-size: 25px;
+    opacity: 0;
+}
+.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width:480px){
+    #panel-4,#panel-5{
+        display: none;
+    }
+}
